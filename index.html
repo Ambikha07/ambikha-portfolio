@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Ambikha Venkatachalam, Software Test Engineer specializing in test automation and AI testing.">
+  <title>Ambikha Venkatachalam | QA & AI Test Automation</title>
+  <style>
+    :root {
+      --bg: #0b1020; --panel: #121a2d; --panel2: #172238; --text: #edf2ff;
+      --muted: #aab6cc; --accent: #7c9cff; --accent2: #75e0c1; --line: #283650;
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.65 Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin: auto; }
+    header { position: sticky; top: 0; z-index: 5; background: rgba(11,16,32,.88); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(40,54,80,.7); }
+    nav { min-height: 72px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { font-weight: 800; letter-spacing: -.04em; font-size: 1.05rem; }
+    .brand span { color: var(--accent2); }
+    .navlinks { display:flex; gap:22px; color:var(--muted); font-size:.9rem; }
+    .navlinks a:hover { color:var(--text); }
+    .hero { padding: 92px 0 78px; display:grid; grid-template-columns: 1.4fr .8fr; gap:50px; align-items:center; }
+    .eyebrow { color:var(--accent2); text-transform:uppercase; letter-spacing:.16em; font-size:.76rem; font-weight:800; }
+    h1 { font-size: clamp(2.7rem, 6vw, 5rem); line-height:1.02; letter-spacing:-.065em; margin:18px 0; }
+    h1 em { color:var(--accent); font-style:normal; }
+    .lead { max-width:660px; color:var(--muted); font-size:1.12rem; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; padding:11px 18px; border-radius:10px; font-weight:700; border:1px solid var(--line); }
+    .btn.primary { background:var(--accent); color:#081126; border-color:var(--accent); }
+    .btn:hover { transform:translateY(-2px); }
+    .profile-card { background:linear-gradient(145deg,#1a2944,#111a2c); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:0 24px 70px rgba(0,0,0,.25); }
+    .monogram { width:76px; height:76px; display:grid; place-items:center; border-radius:20px; background:linear-gradient(135deg,var(--accent),var(--accent2)); color:#0b1020; font-size:1.8rem; font-weight:900; }
+    .profile-card h2 { margin:18px 0 4px; font-size:1.35rem; }
+    .profile-card p { margin:0; color:var(--muted); }
+    .quick { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:25px; }
+    .quick div { background:rgba(255,255,255,.04); padding:13px; border-radius:12px; }
+    .quick strong { display:block; font-size:1.12rem; }
+    .quick span { color:var(--muted); font-size:.78rem; }
+    section { padding:64px 0; border-top:1px solid rgba(40,54,80,.65); }
+    .section-head { margin-bottom:28px; }
+    .section-head h2 { margin:7px 0; font-size:clamp(1.8rem,4vw,2.5rem); letter-spacing:-.045em; }
+    .section-head p { margin:0; color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:24px; }
+    .card h3 { margin:0 0 8px; font-size:1.18rem; }
+    .card p { color:var(--muted); margin:0 0 12px; }
+    .taglist { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+    .tag { font-size:.78rem; color:#d8e2ff; background:#202e49; border:1px solid #314362; border-radius:999px; padding:5px 10px; }
+    .project-top { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px; }
+    .domain { color:var(--accent2); font-size:.78rem; font-weight:800; text-transform:uppercase; letter-spacing:.1em; }
+    ul { margin:12px 0 0; padding-left:20px; color:var(--muted); }
+    li { margin:7px 0; }
+    .skills { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .skillbox { background:var(--panel); border:1px solid var(--line); padding:19px; border-radius:15px; }
+    .skillbox h3 { font-size:1rem; margin:0 0 10px; }
+    .skillbox p { margin:0; color:var(--muted); font-size:.92rem; }
+    .timeline { border-left:2px solid var(--line); padding-left:24px; margin-left:8px; }
+    .timeline-item { position:relative; padding:0 0 24px; }
+    .timeline-item:before { content:""; position:absolute; left:-31px; top:7px; width:12px; height:12px; border-radius:50%; background:var(--accent2); box-shadow:0 0 0 5px var(--bg); }
+    .timeline-item h3 { margin:0; }
+    .timeline-item .meta { color:var(--accent2); font-size:.88rem; margin:3px 0 8px; }
+    .timeline-item p { color:var(--muted); margin:0; }
+    .contact { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:22px; background:linear-gradient(120deg,#172743,#142036); border:1px solid var(--line); border-radius:20px; padding:28px; }
+    .contact h2 { margin:0 0 6px; }
+    .contact p { margin:0; color:var(--muted); }
+    footer { padding:28px 0 40px; color:var(--muted); font-size:.85rem; text-align:center; }
+    @media(max-width:800px) { .hero { grid-template-columns:1fr; padding-top:65px; } .grid { grid-template-columns:1fr; } .skills { grid-template-columns:1fr 1fr; } .navlinks { gap:12px; font-size:.8rem; } }
+    @media(max-width:540px) { .wrap { width:min(100% - 28px,var(--max)); } nav { align-items:flex-start; padding:16px 0; flex-direction:column; } .navlinks { flex-wrap:wrap; } .skills { grid-template-columns:1fr; } section { padding:48px 0; } }
+  </style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#home">AV<span>.</span></a>
+    <div class="navlinks">
+      <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap hero" id="home">
+    <div>
+      <div class="eyebrow">Software Test Engineer · QA Automation · AI Testing</div>
+      <h1>Ambikha<br><em>Venkatachalam</em></h1>
+      <p class="lead">I help teams deliver dependable software through thoughtful test engineering, automation, API validation and emerging AI quality practices.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">Explore my work</a>
+        <a class="btn" href="mailto:Ambikha0709@gmail.com">Contact me</a>
+      </div>
+    </div>
+    <aside class="profile-card">
+      <div class="monogram">AV</div>
+      <h2>Quality with purpose.</h2>
+      <p>Software Test Engineer – 1 at Altimetric</p>
+      <div class="quick">
+        <div><strong>4.8 years</strong><span>Quality engineering experience</span></div>
+        <div><strong>2 projects</strong><span>Insurance & e-commerce</span></div>
+        <div><strong>3 layers</strong><span>Web, mobile & API</span></div>
+        <div><strong>AI / LLM</strong><span>Prompt and response testing</span></div>
+      </div>
+    </aside>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">About me</div><h2>Building confidence through testing.</h2></div>
+      <p class="lead">I am a Software Test Engineer with 4.8 years of experience in quality engineering and test automation. I have contributed to projects in the insurance and e-commerce domains, working across web, mobile, API and database testing. My experience includes automation framework development, CI/CD test integration, and GenAI/LLM testing focused on response quality, consistency, bias and hallucination checks.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Selected projects</div><h2>Project experience</h2><p>Hands-on quality engineering across two business domains.</p></div>
+      <div class="grid">
+        <article class="card">
+          <div class="project-top"><span class="domain">Insurance · Jul 2023 – Present</span></div>
+          <h3>Nationwide – AI-Enabled Insurance Application</h3>
+          <p>Quality assurance and automation for insurance application features, including GenAI-powered functionality.</p>
+          <ul>
+            <li>Designed and maintained test cases and automation scripts aligned with business requirements.</li>
+            <li>Performed prompt testing, response validation, scenario-based and edge-case testing.</li>
+            <li>Evaluated AI outputs for accuracy, relevance, consistency, bias and hallucinations.</li>
+            <li>Executed UI, API, integration, regression and end-to-end testing.</li>
+            <li>Validated REST APIs and backend data using Rest Assured, Postman and MySQL.</li>
+            <li>Supported CI/CD execution, test reporting and Jira defect management.</li>
+          </ul>
+          <div class="taglist"><span class="tag">Selenium</span><span class="tag">Playwright</span><span class="tag">Java</span><span class="tag">TestNG</span><span class="tag">Rest Assured</span><span class="tag">GenAI / LLM Testing</span><span class="tag">Jenkins</span></div>
+        </article>
+        <article class="card">
+          <div class="project-top"><span class="domain">E-commerce · Feb 2022 – Jul 2023</span></div>
+          <h3>NuvoRetail – E-commerce Platform</h3>
+          <p>Functional and automation testing for an e-commerce platform across web, mobile, API and backend layers.</p>
+          <ul>
+            <li>Analysed requirements and created functional test plans and test cases.</li>
+            <li>Automated web, mobile and API scenarios using Selenium, Appium and Rest Assured.</li>
+            <li>Built Java automation frameworks using TestNG, POM, Data-Driven and Hybrid approaches.</li>
+            <li>Created Cucumber BDD scenarios and SQL queries for backend validation.</li>
+            <li>Integrated regression tests with Jenkins and supported UAT activities.</li>
+            <li>Worked with developers to investigate defects, validate fixes and improve test coverage.</li>
+          </ul>
+          <div class="taglist"><span class="tag">Selenium</span><span class="tag">Appium</span><span class="tag">Java</span><span class="tag">Cucumber BDD</span><span class="tag">SQL</span><span class="tag">Postman</span><span class="tag">Jenkins</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Technical toolkit</div><h2>Skills & technologies</h2></div>
+      <div class="skills">
+        <div class="skillbox"><h3>UI Automation</h3><p>Selenium · Playwright · Appium</p></div>
+        <div class="skillbox"><h3>Programming</h3><p>Java · JavaScript · SQL</p></div>
+        <div class="skillbox"><h3>API Testing</h3><p>Rest Assured · Postman · REST APIs</p></div>
+        <div class="skillbox"><h3>Frameworks</h3><p>TestNG · JUnit · Cucumber BDD · POM · Data-Driven · Hybrid</p></div>
+        <div class="skillbox"><h3>AI Testing</h3><p>GenAI / LLM testing · Prompt validation · Output validation · Hallucination and bias checks</p></div>
+        <div class="skillbox"><h3>DevOps & Tools</h3><p>Jenkins · GitHub Actions · Maven · Git · GitHub · Jira</p></div>
+        <div class="skillbox"><h3>Database</h3><p>MySQL · SQL queries · Data integrity validation</p></div>
+        <div class="skillbox"><h3>Testing Practices</h3><p>Functional · Integration · System · Regression · UAT · End-to-End</p></div>
+        <div class="skillbox"><h3>Ways of Working</h3><p>Agile Scrum · Waterfall · SDLC · STLC · Defect management</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Career</div><h2>Professional experience</h2></div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Software Test Engineer – 1 · Altimetric</h3>
+          <div class="meta">February 2022 – Present</div>
+          <p>Working across Nationwide and NuvoRetail projects, contributing to test planning, automation, AI testing, API and database validation, CI/CD execution, defect management and quality reporting.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Bachelor of Engineering – Computer Science and Engineering</h3>
+          <div class="meta">2011 – 2015 · Greentech College of Engineering for Women, Salem, Tamil Nadu</div>
+          <p>BE in Computer Science and Engineering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <div><div class="eyebrow">Get in touch</div><h2>Let's talk about quality engineering.</h2><p>Open to connecting about software testing and automation opportunities.</p></div>
+        <div class="actions">
+          <a class="btn primary" href="mailto:Ambikha0709@gmail.com">Email Ambikha</a>
+          <a class="btn" href="tel:+919944035273">Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">© <span id="year"></span> Ambikha Venkatachalam · Software Test Engineer</div></footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
